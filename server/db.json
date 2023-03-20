@@ -1,0 +1,62 @@
+{
+  "contacts": [
+    {
+      "fullname": "دیوید بکام",
+      "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTI2zdA5vjlipR2xPqMG9bf8wRuhWk63j1pl8WUFKw9_w&s",
+      "number": "09121113344",
+      "email": "david@beckham.com",
+      "occupation": "footballer",
+      "group": "1",
+      "id": 5
+    },
+    {
+      "fullname": "کریستیانو رونالدو",
+      "number": "09121112345",
+      "email": "cris@ronaldo.com",
+      "occupation": "footballer",
+      "group": "3",
+      "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTH1ym1zWZBebAHy8QMxoG4OMRW7x_ENx7NBqXbCzwLFg&s",
+      "id": 6
+    },
+    {
+      "fullname": "لیونل مسی",
+      "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5vz5t-opUQhJR07s5CIxOwgyUzPq3Iha2asCUxyxM&s",
+      "number": 9121113458,
+      "email": "lionel@messi.com",
+      "occupation": "footaller",
+      "group": "2",
+      "id": 7
+    },
+    {
+      "fullname": "کیلین امباپه",
+      "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWDAvBMO6lsHmV6StqxHvdIEHqDgfrTlhGC8tVTbWV48lAMg-y7QBF&s",
+      "number": 9121113342,
+      "email": "kilian@mbape.com",
+      "occupation": "footballer",
+      "group": "2",
+      "id": 9
+    }
+  ],
+  "groups": [
+    {
+      "id": "1",
+      "name": "همکار"
+    },
+    {
+      "id": "2",
+      "name": "دوست"
+    },
+    {
+      "id": "3",
+      "name": "فامیل"
+    },
+    {
+      "id": "4",
+      "name": "سرویس"
+    },
+    {
+      "id": "5",
+      "name": "آشنا"
+    }
+  ]
+}
