@@ -6,9 +6,10 @@ import { getContact, getGroup } from "../../services/contactService";
 import { Spinner } from "../";
 import { CURRENTLINE, CYAN, PURPLE } from "../../helpers/colors";
 import { ContactContext } from "../../context/contactContext";
+import { Helmet, HelmetProvider } from "react-helmet-async";
 
 export const ViewContact = () => {
-  const {loading, setLoading} = useContext(ContactContext)
+  const { loading, setLoading } = useContext(ContactContext);
   const { contactId } = useParams();
 
   const [state, setState] = useState({
@@ -19,7 +20,7 @@ export const ViewContact = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        setLoading(true)
+        setLoading(true);
         const { data: contactData } = await getContact(contactId);
         const { data: groupData } = await getGroup(contactData.group);
 
@@ -28,10 +29,10 @@ export const ViewContact = () => {
           contact: contactData,
           group: groupData,
         });
-        setLoading(false)
+        setLoading(false);
       } catch (err) {
         console.log(err.message);
-        setLoading(false)
+        setLoading(false);
       }
     };
 
@@ -41,7 +42,11 @@ export const ViewContact = () => {
   const { contact, group } = state;
 
   return (
-    <>
+    <HelmetProvider>
+      <Helmet>
+        <title>View Contact</title>
+      </Helmet>
+
       <section className="view-contact-intro p3">
         <div className="container">
           <div className="row my-2 text-center">
@@ -87,7 +92,8 @@ export const ViewContact = () => {
                         ایمیل : <span className="fw-bold">{contact.email}</span>
                       </li>
                       <li className="list-group-item list-group-item-dark">
-                        شغل : <span className="fw-bold">{contact.occupation}</span>
+                        شغل :{" "}
+                        <span className="fw-bold">{contact.occupation}</span>
                       </li>
                       <li className="list-group-item list-group-item-dark">
                         گروه : <span className="fw-bold">{group.name}</span>
@@ -111,6 +117,6 @@ export const ViewContact = () => {
           )}
         </>
       )}
-    </>
+    </HelmetProvider>
   );
 };

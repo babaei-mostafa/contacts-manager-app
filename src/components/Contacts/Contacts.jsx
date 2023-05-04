@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { Contact, Spinner } from "..";
 import { ContactContext } from "../../context/contactContext";
 import { CURRENTLINE, ORANGE, PINK } from "../../helpers/colors";

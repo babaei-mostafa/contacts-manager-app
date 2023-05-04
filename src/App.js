@@ -57,7 +57,7 @@ const App = () => {
 
       const { status, data } = await createContact(values);
       if (status === 201) {
-        toast.success("مخاطب با موفقیت ساخته شد")
+        toast.success("مخاطب با موفقیت ساخته شد");
         const allContacts = [...contacts, data];
         setContacts(allContacts);
         setFilteredContacts(allContacts);
@@ -118,7 +118,7 @@ const App = () => {
       setFilteredContacts(updatedContacts);
 
       const { status } = await deleteContact(contactId);
-      toast.error("مخاطب با موفقیت حذف شد")
+      toast.error("مخاطب با موفقیت حذف شد");
 
       if (status !== 200) {
         setContacts(allContacts);
@@ -160,7 +160,7 @@ const App = () => {
       }}
     >
       <div className="App">
-        <ToastContainer rtl={true} theme="colored"  />
+        <ToastContainer rtl={true} theme="colored" />
         <Navbar />
         <Routes>
           <Route path="/" element={<Navigate to="/contacts" />} />
